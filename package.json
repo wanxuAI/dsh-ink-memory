@@ -1,0 +1,53 @@
+{
+  "name": "dsh-ink-memory",
+  "version": "1.1.1",
+  "private": true,
+  "description": "墨忆 Ink Memory：跨会话长期记忆插件——半衰期淡忘、证据召回、事实键取代、全可观测，设置页内置管理面板。融合 dsh-fish-memory / dsh-meow-memory / dsh-auto-memory 各家优点，零依赖。",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/store.js",
+    "lib/text.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "icon.svg",
+    "locale/en.json",
+    "locale/zh.json"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-host-webserver": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-host-webserver": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check lib/store.js && node --check lib/text.js && node --check lib/client.js",
+    "test": "node --check index.js && node --check lib/client.js && node test/core.test.mjs && node test/plugin.smoke.mjs"
+  }
+}

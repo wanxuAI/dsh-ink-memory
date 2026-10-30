@@ -1,0 +1,10 @@
+# dsh-ink-memory（墨忆）：跨会话长期记忆插件
+# 全部旋钮可在此覆盖（用户 patch 层升级后存活），例：
+#   config:
+#     halfLifeDays: 45
+#     autoExtract: false
+#     dailyQuota: 12
+- insert:
+  - id: ink-memory
+    name: dsh-ink-memory
+    config: {}

@@ -27,6 +27,15 @@ DSH（≥含插件系统的版本）里两种方式：
 
 （安装会在 profile 的 `cordis.patch.yml` 写入一行；不要手编。当前版本见 `package.json`，v1.1.1。）
 
+## 国内镜像下载
+
+GitHub 直连不便的同学，可走网盘下载同款插件资源包（解压后按上文方式 install_bundle 指定目录即可）：
+
+- 夸克网盘：<https://pan.quark.cn/s/b4146e4d060b?pwd=Q8N9>（提取码 `Q8N9`）
+- 百度网盘：<https://pan.baidu.com/s/1spUlJnIIfBGxEpGwj8_jEQ?pwd=ezk8>（提取码 `ezk8`）
+
+镜像如有滞后，以本仓库源码为准。
+
 ## 仓库结构
 
 ```
